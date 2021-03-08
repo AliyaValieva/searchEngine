@@ -1,7 +1,9 @@
 # searchEngine
 
 AUTHORS:
-	Aliya Valieva Haoyuan Bai
+	Aliya Valieva 
+	
+	Haoyuan Bai
 	
 LANGUAGE:
 	Python 3.9
@@ -17,7 +19,8 @@ DESCRIPTION:
 
 
 
-Libraries:
+LIBRARIES:
+
 pip install spacy, parser, bs4, lemmatizer, Flask, sqlite3
 python -m spacy download en_core_web_sm
 
