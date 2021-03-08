@@ -33,4 +33,4 @@ LIBRARIES:
 
 	Running on:  http://127.0.0.1:5000/ 
 		(sample interface with 20 fetched URLS)
- 	 ![Screen Shot 2021-03-08 at 4 57 08 AM](https://user-images.githubusercontent.com/72169983/110261329-9e8f0e80-7fd1-11eb-8772-ce317ab3a35d.png)
+ ![Screen Shot 2021-03-08 at 4 57 08 AM](https://user-images.githubusercontent.com/72169983/110261329-9e8f0e80-7fd1-11eb-8772-ce317ab3a35d.png)
