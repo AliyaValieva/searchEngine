@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Simple searh-engine</title>
+</head>
+
+<body>
+    <div class="container col-sm-12">
+        <div class="col-sm-12">
+            <form action="{{ url_for('simple_search') }}" method="post">
+                <div class="form-group">
+                  <label for="QueryInput">Search query</label>
+                  <input type="text" class="form-control" id="QueryInput" name="search_input" placeholder="Enter query">
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+        </div>
+        <br />
+        <div class="col-sm-12">
+            <table id="output" class="table table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Title</th>
+                        <th scope="col">Document</th>
+                        <th scope="col">URL</th>
+                    </tr>
+                    {% for res in results %}
+                    <tr>
+                    <td>{{ loop.index  }}</td>
+                    {% if res[0] %}
+                    <td>{{ res[0]|capitalize }}</td>
+                    {% else %}
+                    <td>No title</td>
+                    {% endif %}
+                    <td>{{ res[1] }}</td>
+                    <td><a href="{{ res[1] }}">{{ res[2] }}</a></td>
+                    </tr>
+   {% endfor %}
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
